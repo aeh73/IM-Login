@@ -31,9 +31,19 @@
     -fx-border-radius: 4px;
 }
 
+.signin-text-field{
+    -fx-border-color: transparent transparent lightgray transparent;
+    -fx-border-width: 0 0 1px 0;
+    -fx-background-color: -fx-control-inner-background, -fx-control-inner-background, -fx-control-inner-background; /* Sets the background color */
+    -fx-background-insets: 0, 1, 2;
+    -fx-padding: 3 7 3 7;
+}
 .signin-text-field:focused {
-    -fx-focus-color: linear-gradient(from 25% 25% to 100% 100%, #1E524E, #6CFF95);
-    /*-fx-faint-focus-color: linear-gradient(from 25% 25% to 100% 100%, #1E524E, #6CFF95);*/
+    -fx-border-color: transparent transparent linear-gradient(from 25% 25% to 100% 100%, #1E524E, #6CFF95) transparent;
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+    /*-fx-focus-color: linear-gradient(from 25% 25% to 100% 100%, #1E524E, #6CFF95);
+    -fx-faint-focus-color: linear-gradient(from 25% 25% to 100% 100%, #1E524E, #6CFF95);*/
 }
 
 .hidden-pane{

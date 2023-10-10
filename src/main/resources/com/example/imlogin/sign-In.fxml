@@ -16,7 +16,7 @@
    <children>
       <AnchorPane layoutX="524.0" layoutY="173.0" prefHeight="300.0" prefWidth="300.0" styleClass="child-pane-input">
          <children>
-            <MFXButton buttonType="RAISED" depthLevel="LEVEL3" layoutX="120.0" layoutY="204.0" onAction="#handleSignIn" prefHeight="48.0" prefWidth="83.0" rippleAnimateShadow="true" rippleBackgroundOpacity="1.0" styleClass="btnSignin" text="Sign In!">
+            <MFXButton fx:id="btnSignIn" buttonType="RAISED" depthLevel="LEVEL3" layoutX="120.0" layoutY="204.0" onAction="#handleSignIn" prefHeight="48.0" prefWidth="83.0" rippleAnimateShadow="true" rippleBackgroundOpacity="1.0" styleClass="btnSignin" text="Sign In!">
                <rippleColor>
                   <LinearGradient endX="1.0" endY="1.0">
                      <stops>

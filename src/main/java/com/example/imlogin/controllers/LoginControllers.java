@@ -102,10 +102,12 @@ public class LoginControllers {
 
     @FXML
     private void handleSignIn() {
-        connectToDatabase();
+        if (connectToDatabase()) {
+            loadFXML(btnSignIn, "main.fxml");
+        }
     }
 
-    private void connectToDatabase() {
+    private boolean connectToDatabase() {
         String dbHost = tfHost.getText();
         String dbUsername = tfEmail.getText();
         String dbPassword = tfPassword.getText();
@@ -118,10 +120,11 @@ public class LoginControllers {
 
             //close the connection when done
             connection.close();
+            return true; // Return true if connection was successful
         } catch (SQLException e) {
             e.printStackTrace();
-            //Handle errors
             System.out.println("Failed to connect to the database. Please check your credentials and try again.");
+            return false; // Return false if connection failed
         }
     }
 }
