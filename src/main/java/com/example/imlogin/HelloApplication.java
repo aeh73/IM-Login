@@ -12,7 +12,7 @@ import java.io.IOException;
 public class HelloApplication extends Application {
     @Override
     public void start(Stage stage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("sign-In.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/com/example/imlogin/sign-Up.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 980, 680);
         scene.setFill(Color.TRANSPARENT);
         stage.setTitle("Welcome! Please Sign In or Sign Up!");
