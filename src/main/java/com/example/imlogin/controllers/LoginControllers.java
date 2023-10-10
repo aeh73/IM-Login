@@ -24,20 +24,13 @@ import java.sql.SQLException;
 import java.io.IOException;
 
 public class LoginControllers {
-    @FXML
-    private Button btnSignUp;
-    @FXML
-    private Button btnLoadSignUp;
+
     @FXML
     private Button btnSignIn;
     @FXML
-    private Button btnLoadSignIn;
-    @FXML
-    private Button btnClose;
-    @FXML
     private TextField tfHost;
     @FXML
-    private TextField tfEmail;
+    private TextField tfUsername;
     @FXML
     private PasswordField tfPassword;
     @FXML
@@ -109,7 +102,7 @@ public class LoginControllers {
 
     private boolean connectToDatabase() {
         String dbHost = tfHost.getText();
-        String dbUsername = tfEmail.getText();
+        String dbUsername = tfUsername.getText();
         String dbPassword = tfPassword.getText();
 
         String jdbcUrl = "jdbc:mysql://" + dbHost + ":3306/aeh73_SignUp_Login_Test";

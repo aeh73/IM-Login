@@ -2,6 +2,7 @@
 
 <?import io.github.palexdev.materialfx.controls.MFXButton?>
 <?import io.github.palexdev.materialfx.controls.MFXLabel?>
+<?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
@@ -36,6 +37,9 @@
                      </stops>
                   </LinearGradient>
                </rippleColor>
+               <cursor>
+                  <Cursor fx:constant="OPEN_HAND" />
+               </cursor>
             </MFXButton>
          </children>
       </AnchorPane>
@@ -63,6 +67,9 @@
                      </stops>
                   </LinearGradient>
                </rippleColor>
+               <cursor>
+                  <Cursor fx:constant="OPEN_HAND" />
+               </cursor>
             </MFXButton>
             <MFXLabel layoutX="113.0" layoutY="68.0" lineColor="WHITE" text="Have an account?">
                <font>

@@ -2,6 +2,7 @@
 
 <?import io.github.palexdev.materialfx.controls.MFXButton?>
 <?import io.github.palexdev.materialfx.controls.MFXLabel?>
+<?import javafx.scene.Cursor?>
 <?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
@@ -38,10 +39,28 @@
                      </stops>
                   </LinearGradient>
                </rippleColor>
+               <cursor>
+                  <Cursor fx:constant="OPEN_HAND" />
+               </cursor>
             </MFXButton>
-            <TextField fx:id="tfEmail" layoutX="85.0" layoutY="97.0" promptText="Email.." styleClass="signin-text-field" />
+            <TextField fx:id="tfUsername" layoutX="85.0" layoutY="97.0" promptText="Username.." styleClass="signin-text-field" />
             <PasswordField fx:id="tfPassword" layoutX="87.0" layoutY="150.0" promptText="Password.." styleClass="signin-text-field" />
             <TextField fx:id="tfHost" layoutX="85.0" layoutY="48.0" promptText="Host.." styleClass="signin-text-field" />
+            <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="254.0" layoutY="43.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@icons-php-server.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="254.0" layoutY="92.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@icons-username2.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="254.0" layoutY="145.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@icons-password2.png" />
+               </image>
+            </ImageView>
          </children>
       </AnchorPane>
       <AnchorPane layoutX="140.0" layoutY="123.0" prefHeight="400.0" prefWidth="400.0" styleClass="child-pane">
@@ -97,11 +116,17 @@
                      </stops>
                   </LinearGradient>
                </rippleColor>
+               <cursor>
+                  <Cursor fx:constant="OPEN_HAND" />
+               </cursor>
             </MFXButton>
             <ImageView fx:id="imgClose" fitHeight="32.0" fitWidth="32.0" layoutX="354.0" layoutY="11.0" onMouseEntered="#imgRotate" onMousePressed="#handleClose" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@icons-x.png" />
                </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
             </ImageView>
          </children>
       </AnchorPane>
