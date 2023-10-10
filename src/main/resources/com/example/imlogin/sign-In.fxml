@@ -4,6 +4,8 @@
 <?import io.github.palexdev.materialfx.controls.MFXLabel?>
 <?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.paint.Color?>
 <?import javafx.scene.paint.LinearGradient?>
@@ -14,7 +16,7 @@
    <children>
       <AnchorPane layoutX="524.0" layoutY="173.0" prefHeight="300.0" prefWidth="300.0" styleClass="child-pane-input">
          <children>
-            <MFXButton buttonType="RAISED" depthLevel="LEVEL3" layoutX="120.0" layoutY="204.0" prefHeight="48.0" prefWidth="83.0" rippleAnimateShadow="true" rippleBackgroundOpacity="1.0" styleClass="btnSignin" text="Sign In!">
+            <MFXButton buttonType="RAISED" depthLevel="LEVEL3" layoutX="120.0" layoutY="204.0" onAction="#handleSignIn" prefHeight="48.0" prefWidth="83.0" rippleAnimateShadow="true" rippleBackgroundOpacity="1.0" styleClass="btnSignin" text="Sign In!">
                <rippleColor>
                   <LinearGradient endX="1.0" endY="1.0">
                      <stops>
@@ -37,9 +39,9 @@
                   </LinearGradient>
                </rippleColor>
             </MFXButton>
-            <TextField layoutX="85.0" layoutY="97.0" promptText="Email.." styleClass="signin-text-field" />
-            <PasswordField layoutX="87.0" layoutY="150.0" promptText="Password.." styleClass="signin-text-field" />
-            <TextField layoutX="85.0" layoutY="48.0" promptText="Host.." styleClass="signin-text-field" />
+            <TextField fx:id="tfEmail" layoutX="85.0" layoutY="97.0" promptText="Email.." styleClass="signin-text-field" />
+            <PasswordField fx:id="tfPassword" layoutX="87.0" layoutY="150.0" promptText="Password.." styleClass="signin-text-field" />
+            <TextField fx:id="tfHost" layoutX="85.0" layoutY="48.0" promptText="Host.." styleClass="signin-text-field" />
          </children>
       </AnchorPane>
       <AnchorPane layoutX="140.0" layoutY="123.0" prefHeight="400.0" prefWidth="400.0" styleClass="child-pane">
@@ -96,6 +98,11 @@
                   </LinearGradient>
                </rippleColor>
             </MFXButton>
+            <ImageView fx:id="imgClose" fitHeight="32.0" fitWidth="32.0" layoutX="354.0" layoutY="11.0" onMouseEntered="#imgRotate" onMousePressed="#handleClose" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@icons-x.png" />
+               </image>
+            </ImageView>
          </children>
       </AnchorPane>
    </children>

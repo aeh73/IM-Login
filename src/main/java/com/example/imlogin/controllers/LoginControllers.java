@@ -1,6 +1,8 @@
 package com.example.imlogin.controllers;
 
 import javafx.animation.FadeTransition;
+import javafx.animation.RotateTransition;
+import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -9,11 +11,16 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.PasswordField;
+import javafx.scene.control.TextField;
+import javafx.scene.image.ImageView;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 import javafx.util.Duration;
-
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
 import java.io.IOException;
 
 public class LoginControllers {
@@ -25,7 +32,29 @@ public class LoginControllers {
     private Button btnSignIn;
     @FXML
     private Button btnLoadSignIn;
+    @FXML
+    private Button btnClose;
+    @FXML
+    private TextField tfHost;
+    @FXML
+    private TextField tfEmail;
+    @FXML
+    private PasswordField tfPassword;
+    @FXML
+    private ImageView imgClose;
 
+    @FXML
+    private void handleClose() {
+        Platform.exit();
+    }
+    @FXML
+    private void imgRotate() {
+        //System.out.println("imgRotate method called");
+        RotateTransition rotateTransition = new RotateTransition(Duration.seconds(1), imgClose);
+        rotateTransition.setByAngle(360);
+        rotateTransition.setCycleCount(1);
+        rotateTransition.playFromStart();
+    }
     private void fadeTransition(Node node, double fromValue, double toValue, Duration duration, Runnable onFinish) {
         FadeTransition fade = new FadeTransition(duration, node);
         fade.setFromValue(fromValue);
@@ -37,7 +66,6 @@ public class LoginControllers {
         });
         fade.play();
     }
-
     @FXML
     private void loadSignUp(ActionEvent event) {
         Button clickedButton = (Button) event.getSource();
@@ -70,5 +98,30 @@ public class LoginControllers {
                 e.printStackTrace();
             }
         });
+    }
+
+    @FXML
+    private void handleSignIn() {
+        connectToDatabase();
+    }
+
+    private void connectToDatabase() {
+        String dbHost = tfHost.getText();
+        String dbUsername = tfEmail.getText();
+        String dbPassword = tfPassword.getText();
+
+        String jdbcUrl = "jdbc:mysql://" + dbHost + ":3306/aeh73_SignUp_Login_Test";
+
+        try {
+            Connection connection = DriverManager.getConnection(jdbcUrl, dbUsername, dbPassword);
+            System.out.println("Connected to the database successfully!");
+
+            //close the connection when done
+            connection.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+            //Handle errors
+            System.out.println("Failed to connect to the database. Please check your credentials and try again.");
+        }
     }
 }

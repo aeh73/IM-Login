@@ -1,6 +1,7 @@
 module com.example.imlogin {
     requires javafx.controls;
     requires javafx.fxml;
+    requires java.sql;
 
     opens com.example.imlogin to javafx.fxml;
     opens com.example.imlogin.controllers to javafx.fxml;

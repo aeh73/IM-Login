@@ -13,12 +13,15 @@
     -fx-background-radius: 5px;
     -fx-border-radius: 5px;
 }
+.btnClose{
+    -fx-background-color: /*linear-gradient(from 25% 25% to 100% 100%, #1E524E, #6CFF95);*/ TRANSPARENT;
+}
 
 .btnSignup{
-        -fx-background-color: /*linear-gradient(from 25% 25% to 100% 100%, #1E524E, #6CFF95);*/ TRANSPARENT;
-        -fx-border-color: white;
-        -fx-border-width:1px;
-        -fx-border-radius: 4px;
+    -fx-background-color: /*linear-gradient(from 25% 25% to 100% 100%, #1E524E, #6CFF95);*/ TRANSPARENT;
+    -fx-border-color: white;
+    -fx-border-width:1px;
+    -fx-border-radius: 4px;
 }
 
 .btnSignin{
