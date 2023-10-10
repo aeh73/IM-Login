@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import io.github.palexdev.materialfx.controls.MFXButton?>
+<?import io.github.palexdev.materialfx.controls.MFXLabel?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="680.0" prefWidth="980.0" styleClass="parent-pane" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.imlogin.HelloController">
+   <children>
+      <AnchorPane layoutX="153.0" layoutY="174.0" prefHeight="300.0" prefWidth="300.0" styleClass="child-pane-input">
+         <children>
+            <TextField layoutX="30.0" layoutY="36.0" prefHeight="27.0" prefWidth="239.0" promptText="Name.." styleClass="signin-text-field" />
+            <TextField layoutX="30.0" layoutY="78.0" prefHeight="27.0" prefWidth="239.0" promptText="Email.." styleClass="signin-text-field" />
+            <PasswordField layoutX="31.0" layoutY="123.0" prefHeight="27.0" prefWidth="239.0" promptText="Password.." styleClass="signin-text-field" />
+            <TextField layoutX="30.0" layoutY="165.0" prefHeight="27.0" prefWidth="239.0" promptText="Confirm Password.." styleClass="signin-text-field" />
+            <MFXButton buttonType="RAISED" depthLevel="LEVEL3" layoutX="109.0" layoutY="214.0" prefHeight="48.0" prefWidth="83.0" rippleBackgroundOpacity="1.0" styleClass="btnSignin" text="Sign Up!">
+               <rippleColor>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color red="0.11764705926179886" green="0.32156863808631897" blue="0.30588236451148987" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="0.42352941632270813" green="1.0" blue="0.5843137502670288" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </rippleColor>
+            </MFXButton>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="443.0" layoutY="124.0" prefHeight="400.0" prefWidth="400.0" styleClass="child-pane">
+         <children>
+            <MFXButton fx:id="btnLoadSignIn" buttonType="RAISED" depthLevel="LEVEL3" layoutX="161.0" layoutY="239.0" onAction="#loadSignIn" prefHeight="48.0" prefWidth="83.0" rippleAnimateShadow="true" rippleBackgroundOpacity="1.0" styleClass="btnSignup" text="Sign In!" textFill="WHITE">
+               <rippleColor>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color red="0.11764705926179886" green="0.32156863808631897" blue="0.30588236451148987" />
+                           </color>
+                        </Stop>
+                        <Stop offset="0.006711409395973154">
+                           <color>
+                              <Color red="0.11764705926179886" green="0.32156863808631897" blue="0.30588236451148987" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="0.42352941632270813" green="1.0" blue="0.5843137502670288" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </rippleColor>
+            </MFXButton>
+            <MFXLabel layoutX="113.0" layoutY="68.0" lineColor="WHITE" text="Have an account?">
+               <font>
+                  <Font name="System Bold Italic" size="18.0" />
+               </font>
+               <textFill>
+                  <Color red="1.0" green="1.0" blue="1.0" />
+               </textFill>
+               <unfocusedLineColor>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color red="0.11764705926179886" green="0.32156863808631897" blue="0.30588236451148987" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="0.42352941632270813" green="1.0" blue="0.5843137502670288" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </unfocusedLineColor>
+            </MFXLabel>
+            <Label layoutX="68.0" layoutY="116.0" prefHeight="96.0" prefWidth="264.0" text="BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAH" textFill="WHITE" wrapText="true" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

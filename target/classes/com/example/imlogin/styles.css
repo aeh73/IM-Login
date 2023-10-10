@@ -1,0 +1,46 @@
+.parent-pane{
+    -fx-background-color: TRANSPARENT;
+}
+
+.child-pane{
+    -fx-background-color: linear-gradient(to bottom left, #6CFF95, #1E524E);
+    -fx-background-radius: 15px;
+    -fx-border-radius: 15px;
+}
+
+.child-pane-input{
+    -fx-background-color: white;/*linear-gradient(to bottom left, #6CFF95, #1E524E);*/
+    -fx-background-radius: 5px;
+    -fx-border-radius: 5px;
+}
+
+.btnSignup{
+        -fx-background-color: /*linear-gradient(from 25% 25% to 100% 100%, #1E524E, #6CFF95);*/ TRANSPARENT;
+        -fx-border-color: white;
+        -fx-border-width:1px;
+        -fx-border-radius: 4px;
+}
+
+.btnSignin{
+    -fx-background-color: /*linear-gradient(to bottom left, #6CFF95, #1E524E)*/ TRANSPARENT;
+    -fx-border-color: linear-gradient(to bottom left, #6CFF95, #1E524E);
+    -fx-border-width:1px;
+    -fx-border-radius: 4px;
+}
+
+.signin-text-field:focused {
+    -fx-focus-color: linear-gradient(from 25% 25% to 100% 100%, #1E524E, #6CFF95);
+    /*-fx-faint-focus-color: linear-gradient(from 25% 25% to 100% 100%, #1E524E, #6CFF95);*/
+}
+
+.hidden-pane{
+    -fx-background-color: white;
+}
+
+.visible-pane{
+    -fx-background-color: linear-gradient(to bottom left, #6CFF95, #1E524E);
+}
+
+.login-input{
+
+}
